@@ -43,7 +43,7 @@ public class Student {
 
 	//toString
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", grade=" + grade + "]";
+		return "id = " + id + ", name = " + name + ", grade = " + grade + "";
 	}
 	
 	
