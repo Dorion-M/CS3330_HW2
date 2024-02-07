@@ -13,10 +13,22 @@ public class Main {
         // Display all students
         if (fileReadStatus) {
             studentManager.displayStudents();
+            
+            boolean studentFound = studentManager.searchStudentById(102);
+            System.out.println("Student found: " + studentFound);
+
+         // Update the grade of a student by ID.
+            boolean studentGradeUpdateStatus = studentManager.updateStudentGradeById(102, (double) 95);
+            System.out.println("Student updated: " + studentGradeUpdateStatus);
+            
+            studentManager.displayStudents();
+            
         } else {
             System.out.println("Failed to read student data from file.");
         }
         
+        
+
 		
 	}
 
