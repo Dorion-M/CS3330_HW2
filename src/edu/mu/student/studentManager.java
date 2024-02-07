@@ -68,4 +68,24 @@ public class studentManager {
             }
         }
     }
+    
+    public boolean searchStudentById(int id) {
+    	for(Student student : students) {
+//    		Student find = new Student(id,student.getName(),student.getGrade());
+//    		if(student.equals(find)){
+            if(student.getId() == id) {
+    			System.out.println("\n"+student.toString());
+                return true;
+    		}
+    	}
+		return false;
+    }
+    
+    public boolean updateStudentGradeById(int id, Double grade) {
+    	if(searchStudentById(id)) {
+    		
+    		return true;
+    	}
+    	return false;
+    }
 }
