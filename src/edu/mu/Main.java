@@ -27,7 +27,7 @@ public class Main {
             System.out.println("Failed to read student data from file.");
         }
         
-        
+        	
 
 		
 	}

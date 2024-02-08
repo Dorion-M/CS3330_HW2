@@ -81,11 +81,26 @@ public class studentManager {
 		return false;
     }
     
+    // Uses the search method to update the student's grade from the given ID.
     public boolean updateStudentGradeById(int id, Double grade) {
-    	if(searchStudentById(id)) {
-    		
-    		return true;
+    	boolean existStudent = searchStudentById(id);
+    	if(!existStudent)
+    	{
+    		System.out.println("There is no ID");
+    		return false;
     	}
-    	return false;
+    	else
+    	{
+    		for(Student student : students)
+    		{
+    			if(student.getId() == id)
+    			{
+    				student.setGrade(grade);
+    				System.out.println("There is an ID and it has been changed");
+    				return true;
+    			}
+    		}
+    		return false;
+    	}
     }
 }
